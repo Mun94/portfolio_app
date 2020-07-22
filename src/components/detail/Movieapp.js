@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import Header from '../common/Header.js';
-import {Link} from 'react-router-dom';
 
 const MovieappBlock = styled.div`
     margin-left : 2rem;
@@ -42,8 +41,8 @@ const Movieapp = () => {
                     프로젝트 설명
                 </Description>
                 <LinkTo>
-                    <Link to = 'https://mun94.github.io/movie_app/' target='_blank'>이용하기</Link>
-                    <Link to = 'https://github.com/Mun94/movie_app' target='_blank'>코드보기</Link>
+                    <a href = 'https://mun94.github.io/movie_app/' target='_blank'>이용하기</a>
+                    <a href = 'https://github.com/Mun94/movie_app' target='_blank'>코드보기</a>
                 </LinkTo>
             </Contents>
         </MovieappBlock>

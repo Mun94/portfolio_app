@@ -13,13 +13,17 @@ import newsapp from '../Img/newsapp.PNG';
 const ToyBlock = styled.div`
     margin-left : 2rem;
     margin-right : 2rem;
+    a{
+        display : flex;
+    justify-content : center;
+    }
 `;
 
 const StyledImg = styled.div`
     width : 100%;
     img{
-        height : auto;
         max-width : 100%;
+        height : auto;
     }
 `;
 

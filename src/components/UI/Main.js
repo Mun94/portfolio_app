@@ -4,13 +4,14 @@ import hungref from '../Img/hungref.PNG';
 import {Link} from 'react-router-dom';
 
 const MainBlock = styled.div`
-    
+    a{
+        display : flex;
+    justify-content : center;
+    }
 `;
 
 const StyledImg = styled.div`
     width : 100%;
-    display : flex;
-    justify-content : center;
     img{
         max-width : 100%;
         height : auto;

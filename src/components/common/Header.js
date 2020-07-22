@@ -5,7 +5,6 @@ import Icons from './Icons.js';
 import Category from './Category.js';
 
 const HeaderBlock = styled.div`
-    max-width : 70rem;
     margin-right : 2rem;
     margin-left : 2rem;
 `;
