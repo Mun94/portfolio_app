@@ -21,7 +21,7 @@ const IconsBlock = styled.div`
 const Icons = () => {
     return(
         <IconsBlock>
-            <a href='https://github.com/Mun94' target='_blank'>
+            <a href='https://github.com/Mun94' target='_blank' rel="noopener noreferrer">
             <GoMarkGithub size='25'/>
             </a>
         </IconsBlock>
