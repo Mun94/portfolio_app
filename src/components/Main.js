@@ -28,9 +28,13 @@ const Main = () => {
     <MainBlock>
       <Text>메인 프로젝트</Text>
       <StyledImg>
-        <Link to="/project/hungref">
-          <img src={hungref} alt="hungref" />
-        </Link>
+        <div>
+          <Link to="/project/hungref">
+            <div>
+              <img src={hungref} alt="hungref" />
+            </div>
+          </Link>
+        </div>
       </StyledImg>
     </MainBlock>
   );

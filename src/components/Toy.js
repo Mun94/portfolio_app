@@ -2,13 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-import calculator from "./Img/calculator.PNG";
-import todolist from "./Img/todolist.PNG";
-import rps from "./Img/rps.PNG";
-import paint from "./Img/paint.PNG";
-import movieapp from "./Img/movieapp.PNG";
-import weatherapp from "./Img/weatherapp.jpg";
-import newsapp from "./Img/newsapp.PNG";
+import calculator from "../Img/calculator.PNG";
+import todolist from "../Img/todolist.PNG";
+import rps from "../Img/rps.PNG";
+import paint from "../Img/paint.PNG";
+import movieapp from "../Img/movieapp.PNG";
+import weatherapp from "../Img/weatherapp.jpg";
+import newsapp from "../Img/newsapp.PNG";
 
 const ToyBlock = styled.div`
   margin-left: 2rem;
@@ -22,7 +22,7 @@ const ToyBlock = styled.div`
 const StyledImg = styled.div`
   width: 100%;
   img {
-    max-width: 100%;
+    max-width: 75%;
     height: auto;
   }
 `;
