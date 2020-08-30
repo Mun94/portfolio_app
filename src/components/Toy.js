@@ -17,39 +17,50 @@ const ToySpacer = styled.div`
   margin-bottom: 1rem;
 `;
 
+const lists = [
+  {
+    src: todolist,
+    name: "todolist",
+  },
+  {
+    src: calculator,
+    name: "calculator",
+  },
+  {
+    src: rps,
+    name: "rps",
+  },
+  {
+    src: paint,
+    name: "paint",
+  },
+  {
+    src: movieapp,
+    name: "movieapp",
+  },
+  {
+    src: weatherapp,
+    name: "weatherapp",
+  },
+  {
+    src: newsapp,
+    name: "newsapp",
+  },
+];
+
 const Toy = () => {
   return (
     <div className="Block">
       <div className="Text">토이 프로젝트</div>
       <div className="StyledImg">
-        <Link to="/project/toy/calculator">
-          <img src={calculator} alt="calculator" />
-        </Link>
-        <ToySpacer />
-        <Link to="/project/toy/todolist">
-          <img src={todolist} alt="todolist" />
-        </Link>
-        <ToySpacer />
-        <Link to="/project/toy/rps">
-          <img src={rps} alt="rps" />
-        </Link>
-        <ToySpacer />
-        <Link to="/project/toy/paint">
-          <img src={paint} alt="paint" />
-        </Link>
-        <ToySpacer />
-        <Link to="/project/toy/movieapp">
-          <img src={movieapp} alt="movieapp" />
-        </Link>
-        <ToySpacer />
-        <Link to="/project/toy/weatherapp">
-          <img src={weatherapp} alt="weatherapp" />
-        </Link>
-        <ToySpacer />
-        <Link to="/project/toy/newsapp">
-          <img src={newsapp} alt="newsapp" />
-        </Link>
-        <ToySpacer />
+        {lists.map((list) => (
+          <div key={list.name}>
+            <Link to={`/project/toy/${list.name}`}>
+              <img src={list.src} alt={list.name} />
+            </Link>
+            <ToySpacer />
+          </div>
+        ))}
       </div>
     </div>
   );
