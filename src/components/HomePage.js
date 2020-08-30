@@ -1,20 +1,19 @@
 import React from "react";
 import Header from "./common/Header.js";
+import "../public/MainToy.scss";
+
 import Main from "./Main.js";
 import Toy from "./Toy.js";
 
-import qs from "qs";
 import { withRouter } from "react-router-dom";
 
-const HomePage = ({ location }) => {
-  const query = qs.parse(location.search, { ignoreQueryPrefix: true });
-
-  const toy = query.category === "toy";
+const HomePage = ({ match }) => {
+  const { category } = match.params;
 
   return (
     <>
       <Header />
-      {toy ? <Toy /> : <Main />}
+      {category === "toy" ? <Toy /> : <Main />}
     </>
   );
 };

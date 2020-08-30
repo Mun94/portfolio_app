@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { css } from "styled-components";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Styled = css`
   background: gray;
@@ -18,13 +18,17 @@ const Styled = css`
   & + & {
     margin-left: 2rem;
   }
+  &:hover {
+    background: yellow;
+    color: white;
+  }
 `;
 
 const StyledButton = styled.button`
   ${Styled}
 `;
 
-const StyledLink = styled(Link)`
+const StyledLink = styled(NavLink)`
   ${Styled}
 `;
 

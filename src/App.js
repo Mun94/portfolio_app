@@ -1,27 +1,27 @@
-import React from 'react';
-import {Route} from 'react-router-dom';
-import HomePage from './components/HomePage.js';
-import Hungref from './components/detail/Hungref.js';
-import Calculator from './components/detail/Calculator.js';
-import Movieapp from './components/detail/Movieapp.js';
-import Newsapp from './components/detail/Newsapp.js';
-import Paint from './components/detail/Paint.js';
-import Rps from './components/detail/Rps.js';
-import Todolist from './components/detail/Todolist.js';
-import Weatherapp from './components/detail/Weatherapp.js';
+import React from "react";
+import { Route, Switch } from "react-router-dom";
+import Button from "./components/common/Button";
+
+import HomePage from "./components/HomePage.js";
+import ProjectDetail from "./components/detail/ProjectDetail.js";
 
 function App() {
   return (
     <>
-      <Route path = '/' component = {HomePage} exact/>
-      <Route path = '/:project/hungref' component = {Hungref}/>
-      <Route path = '/:project/calculator' component = {Calculator}/>
-      <Route path = '/:project/movieapp' component = {Movieapp}/>
-      <Route path = '/:project/newsapp' component = {Newsapp}/>
-      <Route path = '/:project/paint' component = {Paint}/>
-      <Route path = '/:project/rps' component = {Rps}/>
-      <Route path = '/:project/todolist' component = {Todolist}/>
-      <Route path = '/:project/weatherapp' component = {Weatherapp}/>
+      <Switch>
+        <Route path={["/project/:category", "/"]} component={HomePage} exact />
+        <Route path="/project/:category/:name" component={ProjectDetail} />
+
+        <Route
+          render={({ location, history }) => (
+            <div>
+              <h2>이 페이지는 존재하지 않습니다:</h2>
+              <p>{location.pathname}</p>
+              <Button onClick={() => history.push("/")}>홈으로</Button>
+            </div>
+          )}
+        />
+      </Switch>
     </>
   );
 }

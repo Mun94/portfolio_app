@@ -8,15 +8,24 @@ const CategoryBlock = styled.div`
   justify-content: center;
 `;
 
-const Category = ({ match }) => {
+const Category = ({ match, history }) => {
+  const activeStyle = {
+    background: "yellow",
+    color: "white",
+  };
+
   return (
     <CategoryBlock>
-      {match.path.includes("project") ? (
-        <Button to="/">Home</Button>
+      {match.params.name ? (
+        <Button onClick={() => history.goBack()}>Back</Button>
       ) : (
         <>
-          <Button to="/">Main</Button>
-          <Button to={`?category=toy`}>Toy</Button>
+          <Button activeStyle={activeStyle} to="/project/main">
+            Main
+          </Button>
+          <Button activeStyle={activeStyle} to="/project/toy">
+            Toy
+          </Button>
         </>
       )}
     </CategoryBlock>

@@ -1,6 +1,6 @@
 import React from "react";
-import styled from "styled-components";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 import calculator from "../Img/calculator.PNG";
 import todolist from "../Img/todolist.PNG";
@@ -9,28 +9,6 @@ import paint from "../Img/paint.PNG";
 import movieapp from "../Img/movieapp.PNG";
 import weatherapp from "../Img/weatherapp.jpg";
 import newsapp from "../Img/newsapp.PNG";
-
-const ToyBlock = styled.div`
-  margin-left: 2rem;
-  margin-right: 2rem;
-  a {
-    display: flex;
-    justify-content: center;
-  }
-`;
-
-const StyledImg = styled.div`
-  width: 100%;
-  img {
-    max-width: 75%;
-    height: auto;
-  }
-`;
-
-const Text = styled.div`
-  text-align: center;
-  margin-bottom: 1rem;
-`;
 
 const ToySpacer = styled.div`
   border: 1px solid gray;
@@ -41,39 +19,39 @@ const ToySpacer = styled.div`
 
 const Toy = () => {
   return (
-    <ToyBlock>
-      <Text>토이 프로젝트</Text>
-      <StyledImg>
-        <Link to="/project/calculator">
+    <div className="Block">
+      <div className="Text">토이 프로젝트</div>
+      <div className="StyledImg">
+        <Link to="/project/toy/calculator">
           <img src={calculator} alt="calculator" />
         </Link>
         <ToySpacer />
-        <Link to="/project/todolist">
+        <Link to="/project/toy/todolist">
           <img src={todolist} alt="todolist" />
         </Link>
         <ToySpacer />
-        <Link to="/project/rps">
+        <Link to="/project/toy/rps">
           <img src={rps} alt="rps" />
         </Link>
         <ToySpacer />
-        <Link to="/project/paint">
+        <Link to="/project/toy/paint">
           <img src={paint} alt="paint" />
         </Link>
         <ToySpacer />
-        <Link to="/project/movieapp">
+        <Link to="/project/toy/movieapp">
           <img src={movieapp} alt="movieapp" />
         </Link>
         <ToySpacer />
-        <Link to="/project/weatherapp">
+        <Link to="/project/toy/weatherapp">
           <img src={weatherapp} alt="weatherapp" />
         </Link>
         <ToySpacer />
-        <Link to="/project/newsapp">
+        <Link to="/project/toy/newsapp">
           <img src={newsapp} alt="newsapp" />
         </Link>
         <ToySpacer />
-      </StyledImg>
-    </ToyBlock>
+      </div>
+    </div>
   );
 };
 

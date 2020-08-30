@@ -15,6 +15,9 @@ const IconsBlock = styled.div`
     border: 1px gray solid;
     padding: 0.2rem;
     background: rgba(0, 0, 0, 0.08);
+    &:hover {
+      background: yellow;
+    }
   }
 `;
 
