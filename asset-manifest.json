@@ -1,17 +1,19 @@
 {
   "files": {
     "main.css": "/portfolio_app/static/css/main.e43d84bb.chunk.css",
-    "main.js": "/portfolio_app/static/js/main.6c9db4e9.chunk.js",
-    "main.js.map": "/portfolio_app/static/js/main.6c9db4e9.chunk.js.map",
-    "runtime-main.js": "/portfolio_app/static/js/runtime-main.fca666b6.js",
-    "runtime-main.js.map": "/portfolio_app/static/js/runtime-main.fca666b6.js.map",
-    "static/js/2.bc1c5338.chunk.js": "/portfolio_app/static/js/2.bc1c5338.chunk.js",
-    "static/js/2.bc1c5338.chunk.js.map": "/portfolio_app/static/js/2.bc1c5338.chunk.js.map",
+    "main.js": "/portfolio_app/static/js/main.a753e62f.chunk.js",
+    "main.js.map": "/portfolio_app/static/js/main.a753e62f.chunk.js.map",
+    "runtime-main.js": "/portfolio_app/static/js/runtime-main.5afef274.js",
+    "runtime-main.js.map": "/portfolio_app/static/js/runtime-main.5afef274.js.map",
+    "static/js/2.2e7fb8fd.chunk.js": "/portfolio_app/static/js/2.2e7fb8fd.chunk.js",
+    "static/js/2.2e7fb8fd.chunk.js.map": "/portfolio_app/static/js/2.2e7fb8fd.chunk.js.map",
+    "static/js/3.d4eca58c.chunk.js": "/portfolio_app/static/js/3.d4eca58c.chunk.js",
+    "static/js/3.d4eca58c.chunk.js.map": "/portfolio_app/static/js/3.d4eca58c.chunk.js.map",
     "index.html": "/portfolio_app/index.html",
-    "precache-manifest.596a4077946d6358fb8ef41e95eb92c0.js": "/portfolio_app/precache-manifest.596a4077946d6358fb8ef41e95eb92c0.js",
+    "precache-manifest.ef91d5fa53f6cf85c02b0a35448813a2.js": "/portfolio_app/precache-manifest.ef91d5fa53f6cf85c02b0a35448813a2.js",
     "service-worker.js": "/portfolio_app/service-worker.js",
     "static/css/main.e43d84bb.chunk.css.map": "/portfolio_app/static/css/main.e43d84bb.chunk.css.map",
-    "static/js/2.bc1c5338.chunk.js.LICENSE.txt": "/portfolio_app/static/js/2.bc1c5338.chunk.js.LICENSE.txt",
+    "static/js/2.2e7fb8fd.chunk.js.LICENSE.txt": "/portfolio_app/static/js/2.2e7fb8fd.chunk.js.LICENSE.txt",
     "static/media/calculator.PNG": "/portfolio_app/static/media/calculator.a04aafde.PNG",
     "static/media/hungref.PNG": "/portfolio_app/static/media/hungref.24b0a91c.PNG",
     "static/media/movieapp.PNG": "/portfolio_app/static/media/movieapp.f24bebc4.PNG",
@@ -23,9 +25,9 @@
     "static/media/weatherapp.jpg": "/portfolio_app/static/media/weatherapp.3b05f698.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.fca666b6.js",
-    "static/js/2.bc1c5338.chunk.js",
+    "static/js/runtime-main.5afef274.js",
+    "static/js/2.2e7fb8fd.chunk.js",
     "static/css/main.e43d84bb.chunk.css",
-    "static/js/main.6c9db4e9.chunk.js"
+    "static/js/main.a753e62f.chunk.js"
   ]
 }
