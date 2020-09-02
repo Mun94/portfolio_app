@@ -1,8 +1,10 @@
 import React from "react";
 import Button from "../common/Button.js";
 
+// main
 import Hungref from "./project/Hungref.js";
 
+// toy
 import Calculator from "./project/Calculator.js";
 import Movieapp from "./project/Movieapp.js";
 import Newsapp from "./project/Newsapp.js";

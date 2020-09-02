@@ -1,0 +1,119 @@
+import React, { useState, Suspense, useEffect } from "react";
+import { withRouter } from "react-router-dom";
+import qs from "qs";
+
+// import Index from "./pagination/Index.js";
+
+import Pagination from "./pagination/Pagination.js";
+
+// main img
+import hungref from "../Img/hungref.PNG";
+
+// toy img
+import calculator from "../Img/calculator.PNG";
+import todolist from "../Img/todolist.PNG";
+import rps from "../Img/rps.PNG";
+import paint from "../Img/paint.PNG";
+import movieapp from "../Img/movieapp.PNG";
+import weatherapp from "../Img/weatherapp.jpg";
+import newsapp from "../Img/newsapp.PNG";
+
+const SplitIndex = React.lazy(() => import("./pagination/Index.js"));
+
+const toylists = [
+  {
+    id: 1,
+    src: todolist,
+    name: "todolist",
+  },
+  {
+    id: 2,
+    src: calculator,
+    name: "calculator",
+  },
+  {
+    id: 3,
+    src: rps,
+    name: "rps",
+  },
+  {
+    id: 4,
+    src: paint,
+    name: "paint",
+  },
+  {
+    id: 5,
+    src: movieapp,
+    name: "movieapp",
+  },
+  {
+    id: 6,
+    src: weatherapp,
+    name: "weatherapp",
+  },
+  {
+    id: 7,
+    src: newsapp,
+    name: "newsapp",
+  },
+];
+
+const mainlists = [
+  {
+    id: 1,
+    src: hungref,
+    name: "hungref",
+  },
+];
+
+const MainToy = ({ match, location }) => {
+  const query = qs.parse(location.search, {
+    ignoreQueryPrefix: true,
+  });
+  const { category } = match.params;
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage] = useState(3);
+
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+
+  const toyCurrentPosts = toylists.slice(indexOfFirstPost, indexOfLastPost);
+  const mainCurrentPosts = mainlists.slice(indexOfFirstPost, indexOfLastPost);
+
+  useEffect(() => {
+    setCurrentPage(parseInt(query.page));
+    if (query.page === undefined) {
+      return setCurrentPage(1);
+    }
+  }, [query.page]);
+
+  return (
+    <>
+      {category === "toy" ? (
+        <>
+          <Suspense fallback={<div>로딩 중...</div>}>
+            <SplitIndex lists={toyCurrentPosts} name="toy" />
+          </Suspense>
+          <Pagination
+            postsPerPage={postsPerPage}
+            totalPosts={toylists.length}
+            name="toy"
+          />
+        </>
+      ) : (
+        <>
+          <Suspense fallback={<div>로딩 중...</div>}>
+            <SplitIndex lists={mainCurrentPosts} name="main" />
+          </Suspense>
+          <Pagination
+            postsPerPage={postsPerPage}
+            totalPosts={mainlists.length}
+            name="main"
+          />
+        </>
+      )}
+    </>
+  );
+};
+
+export default withRouter(MainToy);
