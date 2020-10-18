@@ -128,4 +128,4 @@ const MainToy = ({ match, location }) => {
   );
 };
 
-export default withRouter(MainToy);
+export default React.memo(withRouter(MainToy));

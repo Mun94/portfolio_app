@@ -122,4 +122,4 @@ const Detail = ({ match, children }) => {
   );
 };
 
-export default withRouter(Detail);
+export default React.memo(withRouter(Detail));

@@ -27,4 +27,4 @@ const Index = ({ lists, name }) => {
   );
 };
 
-export default Index;
+export default React.memo(Index);

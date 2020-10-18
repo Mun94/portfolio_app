@@ -56,4 +56,4 @@ const ProjectDetail = ({ match, history, location }) => {
   return <>{renderSwitch(name, history, location)}</>;
 };
 
-export default withRouter(ProjectDetail);
+export default React.memo(withRouter(ProjectDetail));
