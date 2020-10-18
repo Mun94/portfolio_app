@@ -3,9 +3,10 @@ import styled from "styled-components";
 import Header from "../common/Header.js";
 import { withRouter } from "react-router-dom";
 
-const CalculatorBlock = styled.div`
+const DetailBlock = styled.div`
   margin-left: 2rem;
   margin-right: 2rem;
+  margin-bottom:2rem;
 `;
 
 const Contents = styled.div``;
@@ -25,6 +26,7 @@ const Description = styled.div`
 const LinkTo = styled.div`
   display: flex;
   flex-direction: column;
+  margin-left:2rem;
   a {
     text-decoration: none;
     background: gray;
@@ -43,12 +45,20 @@ const LinkTo = styled.div`
 
 const data = {
   main: {
+    sandbox: {
+      href1: "http://ec2-13-125-32-104.ap-northeast-2.compute.amazonaws.com:3000/",
+      href2: "https://github.com/Mun94/SandBox/",
+    },
     hungref: {
       href1: "https://mun94.github.io/HungRef/",
       href2: "https://github.com/HungRef/HungRef",
     },
   },
   toy: {
+    wootube: {
+      href1: "https://hidden-earth-27978.herokuapp.com/",
+      href2: "https://github.com/Mun94/wootube/",
+    },
     calculator: {
       href1: "https://mun94.github.io/Basic-calculator/",
       href2: "https://github.com/Mun94/Basic-calculator",
@@ -87,7 +97,7 @@ const Detail = ({ match, children }) => {
   return (
     <>
       <Header />
-      <CalculatorBlock>
+      <DetailBlock>
         <Contents>
           <Title>
             {category}-{name}
@@ -107,7 +117,7 @@ const Detail = ({ match, children }) => {
             </div>
           </LinkTo>
         </Contents>
-      </CalculatorBlock>
+      </DetailBlock>
     </>
   );
 };

@@ -12,7 +12,7 @@ const Spacer = styled.div`
 const Index = ({ lists, name }) => {
   return (
     <div className="Block">
-      <div className="Text">{name} 프로젝트</div>
+      <div className="Text">{name.toUpperCase()} 프로젝트</div>
       <div className="StyledImg">
         {lists.map((list) => (
           <div key={list.id}>

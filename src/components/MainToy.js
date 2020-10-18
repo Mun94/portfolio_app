@@ -7,9 +7,11 @@ import qs from "qs";
 import Pagination from "./pagination/Pagination.js";
 
 // main img
+import sandbox from '../Img/sandbox.PNG';
 import hungref from "../Img/hungref.PNG";
 
 // toy img
+import wootube from '../Img/wootube.PNG';
 import calculator from "../Img/calculator.PNG";
 import todolist from "../Img/todolist.PNG";
 import rps from "../Img/rps.PNG";
@@ -23,36 +25,41 @@ const SplitIndex = React.lazy(() => import("./pagination/Index.js"));
 const toylists = [
   {
     id: 1,
+    src: wootube,
+    name: "wootube",
+  },
+  {
+    id: 2,
     src: todolist,
     name: "todolist",
   },
   {
-    id: 2,
+    id: 3,
     src: calculator,
     name: "calculator",
   },
   {
-    id: 3,
+    id: 4,
     src: rps,
     name: "rps",
   },
   {
-    id: 4,
+    id: 5,
     src: paint,
     name: "paint",
   },
   {
-    id: 5,
+    id: 6,
     src: movieapp,
     name: "movieapp",
   },
   {
-    id: 6,
+    id: 7,
     src: weatherapp,
     name: "weatherapp",
   },
   {
-    id: 7,
+    id: 8,
     src: newsapp,
     name: "newsapp",
   },
@@ -61,6 +68,11 @@ const toylists = [
 const mainlists = [
   {
     id: 1,
+    src: sandbox,
+    name: "sandbox",
+  },
+  {
+    id: 2,
     src: hungref,
     name: "hungref",
   },

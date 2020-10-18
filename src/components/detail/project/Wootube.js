@@ -1,12 +1,12 @@
 import React from "react";
 import Detail from "../Detail.js";
 
-const Hungref = () => {
+const Newsapp = () => {
   return (
     <>
-      <Detail>설명 hungref(제작 중)</Detail>
+      <Detail>설명 WooTube</Detail>
     </>
   );
 };
 
-export default Hungref;
+export default Newsapp;
