@@ -21,12 +21,14 @@ const Title = styled.div`
 
 const Description = styled.div`
   margin-bottom: 1rem;
+  display: flex;
+  flex-direction:column;
+  align-items:center;
 `;
 
 const LinkTo = styled.div`
   display: flex;
-  flex-direction: column;
-  margin-left:2rem;
+  justify-content:center;
   a {
     text-decoration: none;
     background: gray;
@@ -40,6 +42,9 @@ const LinkTo = styled.div`
       background: yellow;
       color: white;
     }
+  }
+  a+a{
+    margin-left:1rem;
   }
 `;
 
@@ -104,17 +109,12 @@ const Detail = ({ match, children }) => {
           </Title>
           <Description>{children}</Description>
           <LinkTo>
-            <div>
               <a href={href1} target="_blank" rel="noopener noreferrer">
                 이용하기
               </a>
-            </div>
-            <hr />
-            <div>
               <a href={href2} target="_blank" rel="noopener noreferrer">
                 코드보기
               </a>
-            </div>
           </LinkTo>
         </Contents>
       </DetailBlock>
