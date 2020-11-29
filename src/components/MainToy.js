@@ -1,9 +1,6 @@
 import React, { useState, Suspense, useEffect } from "react";
 import { withRouter } from "react-router-dom";
 import qs from "qs";
-
-// import Index from "./pagination/Index.js";
-
 import Pagination from "./pagination/Pagination.js";
 
 // main img
@@ -22,7 +19,7 @@ import newsapp from "../Img/newsapp.PNG";
 
 const SplitIndex = React.lazy(() => import("./pagination/Index.js"));
 
-const toylists = [
+let toylists = [
   {
     id: 1,
     src: wootube,
@@ -65,7 +62,7 @@ const toylists = [
   },
 ];
 
-const mainlists = [
+let mainlists = [
   {
     id: 1,
     src: sandbox,
