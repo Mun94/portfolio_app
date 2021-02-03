@@ -50,9 +50,9 @@ const LinkTo = styled.div`
 
 const data = {
   main: {
-    hungref: {
-      href1: "https://mun94.github.io/HungRef/",
-      href2: "https://github.com/HungRef/HungRef",
+    cucook: {
+      href1: "http://www.cucook.net:3000/",
+      href2: "https://github.com/noryangjin",
     },
   },
   toy: {

@@ -5,7 +5,7 @@ import Pagination from "./pagination/Pagination.js";
 
 // main img
 import sandbox from "../Img/sandbox.PNG";
-import hungref from "../Img/hungref.PNG";
+import cucook from "../Img/cucook.PNG";
 
 // toy img
 import wootube from "../Img/wootube.PNG";
@@ -76,8 +76,8 @@ let toylists = [
 let mainlists = [
   {
     id: 1,
-    src: hungref,
-    name: "hungref",
+    src: cucook,
+    name: "cucook",
   },
 ];
 

@@ -2,7 +2,7 @@ import React from "react";
 import Button from "../common/Button.js";
 
 // main
-import Hungref from "./project/Hungref.js";
+import Cucook from "./project/Cucook.js";
 
 // toy
 import SandBox from "./project/SandBox.js";
@@ -22,8 +22,8 @@ const renderSwitch = (type, history, location) => {
   switch (type) {
     case "sandbox":
       return <SandBox />;
-    case "hungref":
-      return <Hungref />;
+    case "cucook":
+      return <Cucook />;
     case "wootube":
       return <Wootube />;
     case "calculator":
