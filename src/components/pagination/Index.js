@@ -22,6 +22,9 @@ const StyledLink = styled(Link)`
 `;
 
 const Index = ({ toyPosts, mainPosts, name }) => {
+  if (name === "toy") {
+    mainPosts = [];
+  }
   return (
     <div className="Block">
       <div className="Text" style={{ textAlign: "center" }}>
