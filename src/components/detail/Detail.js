@@ -6,7 +6,7 @@ import { withRouter } from "react-router-dom";
 const DetailBlock = styled.div`
   margin-left: 2rem;
   margin-right: 2rem;
-  margin-bottom:2rem;
+  margin-bottom: 2rem;
 `;
 
 const Contents = styled.div``;
@@ -22,13 +22,13 @@ const Title = styled.div`
 const Description = styled.div`
   margin-bottom: 1rem;
   display: flex;
-  flex-direction:column;
-  align-items:center;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const LinkTo = styled.div`
   display: flex;
-  justify-content:center;
+  justify-content: center;
   a {
     text-decoration: none;
     background: gray;
@@ -43,23 +43,24 @@ const LinkTo = styled.div`
       color: white;
     }
   }
-  a+a{
-    margin-left:1rem;
+  a + a {
+    margin-left: 1rem;
   }
 `;
 
 const data = {
   main: {
-    sandbox: {
-      href1: "http://ec2-13-125-32-104.ap-northeast-2.compute.amazonaws.com:3000/",
-      href2: "https://github.com/Mun94/SandBox/",
-    },
     hungref: {
       href1: "https://mun94.github.io/HungRef/",
       href2: "https://github.com/HungRef/HungRef",
     },
   },
   toy: {
+    sandbox: {
+      href1:
+        "http://ec2-13-125-32-104.ap-northeast-2.compute.amazonaws.com:3000/",
+      href2: "https://github.com/Mun94/SandBox/",
+    },
     wootube: {
       href1: "https://hidden-earth-27978.herokuapp.com/",
       href2: "https://github.com/Mun94/wootube/",
@@ -67,6 +68,10 @@ const data = {
     calculator: {
       href1: "https://mun94.github.io/Basic-calculator/",
       href2: "https://github.com/Mun94/Basic-calculator",
+    },
+    birdgame: {
+      href1: "https://mun94.github.io/Bird-game/",
+      href2: "https://github.com/Mun94/Bird-game",
     },
     movieapp: {
       href1: "https://mun94.github.io/movie_app/",
@@ -109,12 +114,12 @@ const Detail = ({ match, children }) => {
           </Title>
           <Description>{children}</Description>
           <LinkTo>
-              <a href={href1} target="_blank" rel="noopener noreferrer">
-                이용하기
-              </a>
-              <a href={href2} target="_blank" rel="noopener noreferrer">
-                코드보기
-              </a>
+            <a href={href1} target="_blank" rel="noopener noreferrer">
+              이용하기
+            </a>
+            <a href={href2} target="_blank" rel="noopener noreferrer">
+              코드보기
+            </a>
           </LinkTo>
         </Contents>
       </DetailBlock>

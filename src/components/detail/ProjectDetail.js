@@ -2,11 +2,12 @@ import React from "react";
 import Button from "../common/Button.js";
 
 // main
-import SandBox from "./project/SandBox.js";
 import Hungref from "./project/Hungref.js";
 
 // toy
+import SandBox from "./project/SandBox.js";
 import Wootube from "./project/Wootube.js";
+import Birdgame from "./project/Birdgame";
 import Calculator from "./project/Calculator.js";
 import Movieapp from "./project/Movieapp.js";
 import Newsapp from "./project/Newsapp.js";
@@ -20,11 +21,11 @@ import { withRouter } from "react-router-dom";
 const renderSwitch = (type, history, location) => {
   switch (type) {
     case "sandbox":
-      return <SandBox/>;
+      return <SandBox />;
     case "hungref":
       return <Hungref />;
     case "wootube":
-      return <Wootube/>;
+      return <Wootube />;
     case "calculator":
       return <Calculator />;
     case "movieapp":
@@ -39,6 +40,8 @@ const renderSwitch = (type, history, location) => {
       return <Todolist />;
     case "weatherapp":
       return <Weatherapp />;
+    case "birdgame":
+      return <Birdgame />;
     default:
       return (
         <div>

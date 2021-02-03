@@ -4,11 +4,11 @@ import qs from "qs";
 import Pagination from "./pagination/Pagination.js";
 
 // main img
-import sandbox from '../Img/sandbox.PNG';
+import sandbox from "../Img/sandbox.PNG";
 import hungref from "../Img/hungref.PNG";
 
 // toy img
-import wootube from '../Img/wootube.PNG';
+import wootube from "../Img/wootube.PNG";
 import calculator from "../Img/calculator.PNG";
 import todolist from "../Img/todolist.PNG";
 import rps from "../Img/rps.PNG";
@@ -16,47 +16,58 @@ import paint from "../Img/paint.PNG";
 import movieapp from "../Img/movieapp.PNG";
 import weatherapp from "../Img/weatherapp.jpg";
 import newsapp from "../Img/newsapp.PNG";
+import birdgame from "../Img/birdgame.PNG";
 
 const SplitIndex = React.lazy(() => import("./pagination/Index.js"));
 
 let toylists = [
   {
     id: 1,
+    src: sandbox,
+    name: "sandbox",
+  },
+  {
+    id: 2,
     src: wootube,
     name: "wootube",
   },
   {
-    id: 2,
+    id: 3,
     src: todolist,
     name: "todolist",
   },
   {
-    id: 3,
+    id: 4,
+    src: birdgame,
+    name: "birdgame",
+  },
+  {
+    id: 5,
     src: calculator,
     name: "calculator",
   },
   {
-    id: 4,
+    id: 6,
     src: rps,
     name: "rps",
   },
   {
-    id: 5,
+    id: 7,
     src: paint,
     name: "paint",
   },
   {
-    id: 6,
+    id: 8,
     src: movieapp,
     name: "movieapp",
   },
   {
-    id: 7,
+    id: 9,
     src: weatherapp,
     name: "weatherapp",
   },
   {
-    id: 8,
+    id: 10,
     src: newsapp,
     name: "newsapp",
   },
@@ -65,11 +76,6 @@ let toylists = [
 let mainlists = [
   {
     id: 1,
-    src: sandbox,
-    name: "sandbox",
-  },
-  {
-    id: 2,
     src: hungref,
     name: "hungref",
   },

@@ -9,16 +9,26 @@ const Spacer = styled.div`
   margin-bottom: 1rem;
 `;
 
+const StyledLink = styled(Link)`
+  display: flex;
+  justify-content: center;
+  img {
+    max-width: 500px;
+  }
+`;
+
 const Index = ({ lists, name }) => {
   return (
     <div className="Block">
-      <div className="Text">{name.toUpperCase()} 프로젝트</div>
+      <div className="Text" style={{ textAlign: "center" }}>
+        {name.toUpperCase()} 프로젝트
+      </div>
       <div className="StyledImg">
         {lists.map((list) => (
           <div key={list.id}>
-            <Link to={`/project/${name}/${list.name}`}>
+            <StyledLink to={`/project/${name}/${list.name}`}>
               <img src={list.src} alt={list.name} />
-            </Link>
+            </StyledLink>
             <Spacer />
           </div>
         ))}
