@@ -107,7 +107,7 @@ const MainToy = ({ match, location }) => {
       {category === "toy" ? (
         <>
           <Suspense fallback={<div>로딩 중...</div>}>
-            <SplitIndex lists={toyCurrentPosts} name="toy" />
+            <SplitIndex toyPosts={toyCurrentPosts} name="toy" />
           </Suspense>
           <Pagination
             postsPerPage={postsPerPage}
@@ -118,7 +118,7 @@ const MainToy = ({ match, location }) => {
       ) : (
         <>
           <Suspense fallback={<div>로딩 중...</div>}>
-            <SplitIndex lists={mainCurrentPosts} name="main" />
+            <SplitIndex mainPosts={mainCurrentPosts} name="main" />
           </Suspense>
           <Pagination
             postsPerPage={postsPerPage}

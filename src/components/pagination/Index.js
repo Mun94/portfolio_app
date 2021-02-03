@@ -21,21 +21,30 @@ const StyledLink = styled(Link)`
   }
 `;
 
-const Index = ({ lists, name }) => {
+const Index = ({ toyPosts, mainPosts, name }) => {
   return (
     <div className="Block">
       <div className="Text" style={{ textAlign: "center" }}>
         {name.toUpperCase()} 프로젝트
       </div>
       <div className="StyledImg">
-        {lists.map((list) => (
-          <div key={list.id}>
-            <StyledLink to={`/project/${name}/${list.name}`}>
-              <img src={list.src} alt={list.name} />
-            </StyledLink>
-            <Spacer />
-          </div>
-        ))}
+        {name === "main"
+          ? mainPosts.map((list) => (
+              <div key={list.id}>
+                <StyledLink to={`/project/${name}/${list.name}`}>
+                  <img src={list.src} alt={list.name} />
+                </StyledLink>
+                <Spacer />
+              </div>
+            ))
+          : toyPosts.map((list) => (
+              <div key={list.id}>
+                <StyledLink to={`/project/${name}/${list.name}`}>
+                  <img src={list.src} alt={list.name} />
+                </StyledLink>
+                <Spacer />
+              </div>
+            ))}
       </div>
     </div>
   );
