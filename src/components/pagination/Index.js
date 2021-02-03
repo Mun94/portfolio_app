@@ -21,6 +21,34 @@ const StyledLink = styled(Link)`
   }
 `;
 
+const Posts = React.memo(({ mainPosts, name }) => {
+  if (!mainPosts) {
+    return null;
+  }
+  return mainPosts.map((list) => (
+    <div key={list.id}>
+      <StyledLink to={`/project/${name}/${list.name}`}>
+        <img src={list.src} alt={list.name} />
+      </StyledLink>
+      <Spacer />
+    </div>
+  ));
+});
+
+const ToyPosts = React.memo(({ toyPosts, name }) => {
+  if (!toyPosts) {
+    return null;
+  }
+  return toyPosts.map((list) => (
+    <div key={list.id}>
+      <StyledLink to={`/project/${name}/${list.name}`}>
+        <img src={list.src} alt={list.name} />
+      </StyledLink>
+      <Spacer />
+    </div>
+  ));
+});
+
 const Index = ({ toyPosts, mainPosts, name }) => {
   if (name === "toy") {
     mainPosts = [];
@@ -31,23 +59,8 @@ const Index = ({ toyPosts, mainPosts, name }) => {
         {name.toUpperCase()} 프로젝트
       </div>
       <div className="StyledImg">
-        {name === "main"
-          ? mainPosts.map((list) => (
-              <div key={list.id}>
-                <StyledLink to={`/project/${name}/${list.name}`}>
-                  <img src={list.src} alt={list.name} />
-                </StyledLink>
-                <Spacer />
-              </div>
-            ))
-          : toyPosts.map((list) => (
-              <div key={list.id}>
-                <StyledLink to={`/project/${name}/${list.name}`}>
-                  <img src={list.src} alt={list.name} />
-                </StyledLink>
-                <Spacer />
-              </div>
-            ))}
+        {name === "main" && <Posts mainPosts={mainPosts} name={name} />}
+        {name === "toy" && <ToyPosts toyPosts={toyPosts} name={name} />}
       </div>
     </div>
   );
