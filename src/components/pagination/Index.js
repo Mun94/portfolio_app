@@ -13,8 +13,9 @@ const StyledLink = styled(Link)`
   display: flex;
   justify-content: center;
   img {
-    max-width: 700px;
-    @media (max-width: 700px) {
+    max-width: 550px;
+    object-fit: fill;
+    @media (max-width: 550px) {
       max-width: 360px;
     }
   }
